@@ -6,7 +6,8 @@ layout: null
   {% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
-      "date"     : "{{ post.date }}"
+      "date"     : "{{ post.date }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]
